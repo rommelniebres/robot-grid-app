@@ -1,3 +1,72 @@
+# Robot Grid Application
+
+A React application that visualizes a robot on a 5x5 grid with position and direction controls.
+
+## Screenshots
+
+### Main Application
+![App Demo](./public/screenshots/app.png)
+
+### Storybook Documentation
+![Storybook Demo](./public/screenshots/storybook.png)
+
+## Features
+- 5x5 grid visualization using Material-UI
+- Robot positioning with input format: "x,y DIRECTION" (e.g., "2,3 NORTH")
+- Visual direction indicators with smooth rotation animation
+- Input validation with error handling via Snackbar
+- Storybook component documentation
+- Coordinate system: (0,0) at bottom-left (South West)
+
+## Technologies Used
+- React with TypeScript
+- Vite
+- Material-UI (MUI)
+- Storybook
+
+## Installation
+```bash
+npm install
+```
+
+## Running the Application
+```bash
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Running Storybook
+```bash
+npm run storybook
+```
+
+## Project Structure
+```
+src/
+├── components/
+│   ├── AppGrid.tsx
+│   └── AppGrid.stories.tsx
+├── helpers/
+│   └── AppHelper.ts
+├── types/
+│   ├── direction.ts
+│   └── grid.ts
+├── constants/
+│   └── constants.ts
+├── App.tsx
+└── App.stories.tsx
+```
+
+## Input Format
+- Format: `x,y DIRECTION`
+- x: integer between 0-4
+- y: integer between 0-4  
+- DIRECTION: NORTH, EAST, SOUTH, or WEST
+- Example: `2,3 EAST`
+
+---
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -14,7 +83,6 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
 ```js
 export default defineConfig([
   globalIgnores(["dist"]),
@@ -44,7 +112,6 @@ export default defineConfig([
 ```
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
 ```js
 // eslint.config.js
 import reactX from "eslint-plugin-react-x";
